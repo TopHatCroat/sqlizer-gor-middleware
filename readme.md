@@ -8,12 +8,13 @@ Ensure you've followed [GoReplay installation instructions](https://github.com/b
 
 ```sh
 git clone https://github.com/TopHatCroat/sqlizer-gor-middleware
+cd sqlizer-gor-middleware
 npm install
 npm build
-sudo ./gor --input-raw :3000 \
+sudo gor --input-raw :3000 \
     --input-raw-track-response \
     --output-http-track-response \
-    --middleware "./middleware/sqlizer/dist/index.js ./db.sqlite3" \
+    --middleware "./dist/index.js ./db.sqlite3" \
     --output-http http://localhost:4000
 ```
 `--input-raw-track-response` and `--output-http-track-response` are GoReplay options necessary for accessing the original and replayed responses, **without these middleware will do nothing.**
