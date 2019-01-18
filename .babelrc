@@ -1,0 +1,10 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+        [ "shebang", {
+          "replacement": "#!/usr/bin/env node",
+          "force": true
+        }]
+    ]
+}
+  

@@ -1,0 +1,28 @@
+{
+  "name": "coparator-gor-middleware",
+  "version": "0.1.0",
+  "description": "Compare original and replayed responsed",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha -R spec --require @babel/polyfill --require @babel/register \"src/**/*spec.js\"",
+    "build": "babel src -d dist",
+    "start": "node $NODE_DEBUG_OPTION dist/index.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-shebang": "^1.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "goreplay_middleware": "^0.1.17",
+    "lodash": "^4.17.11",
+    "sqlite3": "4.0.6"
+  }
+}
